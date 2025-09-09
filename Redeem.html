@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redeem - Zombie Hunt RTX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Redeem Code</header>
+  <nav><a href="home.html">Kembali</a></nav>
+  <div class="container">
+    <h2>Masukkan kode redeem</h2>
+    <input id="code" placeholder="Kode redeem"><br><br>
+    <button onclick="redeem()">Redeem</button>
+    <p id="msg"></p>
+  </div>
+  <script>
+    function redeem() {
+      let code = document.getElementById("code").value;
+      if (code === "NelNex") {
+        document.getElementById("msg").textContent = "Berhasil! Dapat 1296111 Koin.";
+      } else {
+        document.getElementById("msg").textContent = "Kode salah / expired.";
+      }
+    }
+  </script>
+</body>
+</html>

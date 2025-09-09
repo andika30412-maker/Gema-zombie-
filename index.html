@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Zombie Hunt RTX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Zombie Hunt RTX - Login</header>
+  <div class="container">
+    <h2>Login Akun</h2>
+    <input type="text" id="username" placeholder="Username"><br><br>
+    <input type="password" id="password" placeholder="Password"><br><br>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      let user = document.getElementById("username").value;
+      let pass = document.getElementById("password").value;
+      if (user && pass) {
+        localStorage.setItem("user", user);
+        window.location.href = "home.html";
+      } else {
+        alert("Isi username & password dulu!");
+      }
+    }
+  </script>
+</body>
+</html>

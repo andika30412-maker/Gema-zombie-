@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Play - Zombie Hunt RTX</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #game {
+      width: 600px;
+      height: 400px;
+      margin: auto;
+      background: url('https://i.ibb.co/NyM4zHw/forest-bg.jpg') center/cover;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #0ff;
+    }
+    #player, .zombie {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      background-size: cover;
+    }
+    #player { background: url('https://i.ibb.co/jWcM1bW/player.png') no-repeat center/contain; bottom: 20px; left: 280px; }
+    .zombie { background: url('https://i.ibb.co/0jWkb5p/zombie.png') no-repeat center/contain; top: 20px; left: 200px; }
+  </style>
+</head>
+<body>
+  <header>Zombie Hunt RTX - Play</header>
+  <nav><a href="home.html">Kembali</a></nav>
+  <div class="container">
+    <div id="game">
+      <div id="player"></div>
+      <div class="zombie"></div>
+    </div>
+    <p>Gunakan tombol panah untuk bergerak!</p>
+  </div>
+  <script>
+    const player = document.getElementById("player");
+    let x = 280, y = 340;
+    document.addEventListener("keydown", e => {
+      if (e.key === "ArrowLeft" && x > 0) x -= 10;
+      if (e.key === "ArrowRight" && x < 560) x += 10;
+      if (e.key === "ArrowUp" && y > 0) y -= 10;
+      if (e.key === "ArrowDown" && y < 360) y += 10;
+      player.style.left = x + "px";
+      player.style.top = y + "px";
+    });
+  </script>
+</body>
+</html>

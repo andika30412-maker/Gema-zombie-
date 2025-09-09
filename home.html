@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beranda - Zombie Hunt </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Zombie Hunt RTX - Beranda</header>
+  <nav>
+    <a href="play.html">Play</a>
+    <a href="inventory.html">Inventory</a>
+    <a href="vip.html">VIP</a>
+    <a href="gacha.html">Gacha</a>
+    <a href="topup.html">Top Up</a>
+    <a href="redeem.html">Redeem</a>
+    <a href="shop.html">Shop</a>
+    <a href="rules.html">Rules</a>
+    <a href="settings.html">Settings</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="container">
+    <h2>Selamat datang, <span id="username"></span> 👋</h2>
+    <p>Pilih menu di atas untuk mulai bermain.</p>
+  </div>
+  <script>
+    document.getElementById("username").textContent = localStorage.getItem("user") || "Player";
+  </script>
+</body>
+</html>

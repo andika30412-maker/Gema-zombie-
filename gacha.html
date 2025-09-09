@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gacha - Zombie Hunt RTX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Gacha</header>
+  <nav><a href="home.html">Kembali</a></nav>
+  <div class="container">
+    <h2>Sistem Gacha</h2>
+    <button onclick="roll()">Gacha 2000 Gems</button>
+    <p id="result"></p>
+  </div>
+  <script>
+    const chars = ["Common: Hird", "Uncommon: Don", "Legendary: Rin Sakuragi", "Prismatic: Niel", "God: God Bless"];
+    function roll() {
+      let c = chars[Math.floor(Math.random()*chars.length)];
+      document.getElementById("result").textContent = "Kamu dapat: " + c;
+    }
+  </script>
+</body>
+</html>
